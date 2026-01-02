@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protein3D - Protein Inverse Folding</title>
+    <script>
+      // Redirect all 404s to the home page for SPA routing
+      (function () {
+        var l = window.location;
+        l.replace(
+          l.protocol +
+            "//" +
+            l.hostname +
+            (l.port ? ":" + l.port : "") +
+            "/?p=" +
+            l.pathname.slice(1).split("/").join("~").replace(/&/g, "~and~") +
+            "&q=" +
+            l.search.slice(1).replace(/&/g, "~and~") +
+            l.hash,
+        );
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
